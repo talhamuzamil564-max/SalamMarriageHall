@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page - Salam Marriage Hall</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #000, #880e4f);
+      color: #fff;
+    }
+    header {
+      background: #b71c1c;
+      padding: 30px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: white;
+    }
+    .container {
+      max-width: 800px;  
+      margin: 40px auto;
+      background: #fff;
+      color: #000;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+    h2 { color: #b71c1c; text-align: center; margin-bottom: 30px; }
+    form { display: flex; flex-direction: column; gap: 20px; }
+    label { font-weight: bold; color: #333; margin-bottom: 5px; display: block; }
+    input, select, textarea {
+      padding: 12px; border: 2px solid #b71c1c; border-radius: 8px;
+      font-size: 1em; width: 100%; box-sizing: border-box;
+    }
+    textarea { resize: none; height: 100px; }
+    .btn {
+      background: #b71c1c; color: white; padding: 16px;
+      font-size: 1.2em; font-weight: bold; border: none;
+      border-radius: 50px; cursor: pointer; transition: 0.3s;
+    }
+    .btn:hover { background: #880e4f; transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+<header>
+  Salam Marriage Hall Booking Form
+</header>
+
+<div class="container">
+  <h2>Fill Your Booking Details</h2>
+
+  <!-- ✅ Correct Action URL + Entry IDs -->
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdU3I4Vgb15fOqI2KpYhyEhln1uUFQ5B8P9a1kgALjO2HyNyQ/formResponse" 
+        method="POST" 
+        target="_blank">
+
+    <div>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="entry.651211113" required>
+    </div>
+
+    <div>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="entry.1886872601" required>
+    </div>
+
+    <div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="entry.906044476" required>
+    </div>
+
+    <div>
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="entry.1054112595" required>
+    </div>
+
+    <div>
+      <label for="event">Event Type</label>
+      <select id="event" name="entry.1261215" required>
+        <option value="">-- Select Event Type --</option>
+        <option>Wedding</option>
+        <option>Walima</option>
+        <option>Birthday</option>
+        <option>Corporate Event</option>
+        <option>Barat</option>
+        <option>Nikah</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="entry.1450390963" required>
+    </div>
+
+    <div>
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="entry.252540548"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Submit Booking</button>
+  </form>
+</div>
+
+</body>
+</html>

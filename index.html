@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salam Marriage Hall</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f8f8f8, #e3e3e3);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* Top Banner */
+    .top-banner {
+      background: linear-gradient(135deg, #b71c1c, #880e4f);
+      color: white;
+      padding: 40px 20px;
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Bottom Banner */
+    .bottom-banner {
+      background: linear-gradient(135deg, #880e4f, #b71c1c);
+      color: white;
+      padding: 25px 20px;
+      font-size: 2.2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin-top: 40px;
+    }
+
+    /* Center Section */
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Buttons */
+    .btn {
+      background: #1976d2;
+      color: white;
+      padding: 18px 40px;
+      font-size: 1.5em;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .btn:hover {
+      background: #0d47a1;
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    /* OWNER PIC */
+    .owner-pic{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 157px;
+      height: 157px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 520px){
+      .owner-pic{ width: 110px; height: 110px; }
+    }
+
+    /* ADDRESS SECTION */
+    .address-section{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 20px 0;
+      scroll-margin-top: 90px;
+    }
+    .address-card{
+      width: 100%;
+      max-width: 1100px;
+      background: linear-gradient(135deg, #ffffff, #fafafa);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .map-wrap{
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 320px;
+      background: #eee;
+    }
+    .map-wrap iframe{
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+    }
+    .addr-details{
+      text-align: left;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+    }
+    .addr-title{
+      font-size: 1.6em;
+      font-weight: 800;
+      color: #880e4f;
+      margin: 0 0 10px 0;
+    }
+    .addr-line{
+      font-size: 1.05em;
+      margin: 8px 0;
+    }
+    .addr-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .chip{
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+      transition: transform 0.15s ease;
+    }
+    .chip:hover{ transform: translateY(-2px); }
+
+    .tiny{
+      font-size: 0.92em;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 980px){
+      .address-card{ grid-template-columns: 1fr; }
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">
+    Salam Marriage Hall
+  </div>
+
+  <!-- Top-left image -->
+  <img src="images/hello4.jpg" alt="Owner" class="owner-pic">
+
+  <div class="center-content">
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="images/hello.jpg" alt="Hall Image 1">
+      <img src="images/hello2.jpg" alt="Hall Image 2">
+      <img src="images/hello3.jpg" alt="Hall Image 3">
+      <img src="images/hello5.jpg" alt="Hall Image 4">
+    </div>
+
+    <!-- Buttons -->
+    <a href="FORM.HTML" class="btn">Book Now</a>
+    <a href="#address" class="btn" style="background:#388e3c;">Address / Location</a>
+
+    <!-- ADDRESS SECTION -->
+    <section id="address" class="address-section">
+      <div class="address-card">
+        <!-- Map -->
+        <div class="map-wrap">
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Salam%20Marriage%20Hall&output=embed">
+          </iframe>
+        </div>
+
+        <!-- Details -->
+        <div class="addr-details">
+          <h2 class="addr-title">Visit Us</h2>
+          <p class="addr-line" id="fullAddress">
+            Salam Marriage Hall, Main Road, Near City Center, Karachi, Pakistan
+          </p>
+          <p class="addr-line">
+            🕒 Timings: 10:00 AM – 11:00 PM (Mon–Sun)
+          </p>
+
+          <!-- Updated universal WhatsApp link -->
+          <div class="addr-actions">
+            <a class="chip" href="https://maps.google.com/?q=Salam+Marriage+Hall" target="_blank">Open in Google Maps</a>
+            <a class="chip" href="tel:+923001234567">Call: +92 300 1234567</a>
+            <a class="chip" href="https://wa.me/923001234567?text=Hello%20I%20want%20to%20book%20Salam%20Marriage%20Hall" target="_blank">WhatsApp</a>
+            <button class="chip" type="button" onclick="copyAddress()">Copy Address</button>
+          </div>
+
+          <p class="tiny">
+            Parking available • Easy access from main road • Event day assistance available
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="bottom-banner">
+    Salam Marriage Hall
+  </div>
+
+  <script>
+    function copyAddress(){
+      const text = document.getElementById('fullAddress').innerText.trim();
+      navigator.clipboard.writeText(text).then(()=>{
+        alert('Address copied!');
+      }).catch(()=>{
+        prompt('Copy the address:', text);
+      });
+    }
+  </script>
+</body>
+</html>
